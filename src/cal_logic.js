@@ -101,12 +101,7 @@ export function comment(BMIList) {
     
 }
 
-export function resetInput() {
-    document.getElementById('preWeight').value = '';
-    document.getElementById('afterWeight').value = '';
-    document.getElementById('height').value = '';
-    document.getElementById('age').value = '';
-}
+export const clearValue = (element) => element.value = '';
 
 export function BMRcalculator() {
     const pre = document.getElementById('preWeight').value;
