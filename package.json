@@ -1,19 +1,17 @@
 {
-  "name": "webpack-dev-server-sample",
+  "name": "BMI, BMR calculator",
   "version": "1.0.0",
-  "description": "Webpack DevServer Sample",
+  "description": "BMI, BMR calculator",
   "main": "src/index.js",
   "scripts": {
     "start": "webpack-dev-server"
   },
-  "author": "",
+  "author": "kimhecan",
   "license": "ISC",
   "devDependencies": {
     "webpack": "^4.35.0",
     "webpack-cli": "^3.3.5",
-    "webpack-dev-server": "^3.7.2"
-  },
-  "dependencies": {
+    "webpack-dev-server": "^3.7.2",
     "jest": "^24.8.0"
   }
 }
