@@ -1,0 +1,76 @@
+#frame {
+    border: 1px solid black;
+    padding: 10px;
+    width:  800px;
+    height: 600px;
+    margin: auto auto;
+    background-color: lightgray;
+
+}
+
+#header {
+    text-align: center;
+}
+#content {
+    border: 1px solid black;
+    padding: 10px;
+    margin: auto;
+}
+#content_1 {
+    border: 1px solid black;
+    padding: 10px;
+    margin: auto;
+}
+.input {
+    width: 120px;
+}
+
+#height {
+    width: 100px;
+}
+
+#age {
+    width: 60px;
+}
+#content_2 {
+    padding: 10px;
+    margin: auto;
+}
+
+#footer {
+    border: 1px solid black;
+    background-color: darkgray;
+    padding: 10px;
+    margin: 20px auto;
+    height: 50px;
+}
+
+#content_1 input {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#content_2 p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#button {
+    width: 60px;
+   background-color: darkblue;
+   color: azure;
+}
+
+#comment {
+    font-weight: bold;
+}
+
+tr td{
+    padding: 20px;
+  
+}
+
+img {
+    width: 20px;
+}
+

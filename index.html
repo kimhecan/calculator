@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>calculator</title>
+    <link rel="stylesheet" href="./cal.css">
+    
+</head>
+
+<body>
+    <div id="frame">
+        <div id="header">
+            <h3>BMI & BMR 계산기</h3>
+        </div>
+        <div id="content">
+            <div id="content_1">
+                <input id="preWeight"   class="input"  type="text"   value="" placeholder="변화 전 몸무게(kg)">
+                <input id="afterWeight" class="input"  type="text"   value="" placeholder="변화 후 몸무게(kg)">
+                <input id="height"      class="input"  type="text"   value="" placeholder="신장(cm)">
+                <input id="age" type="text" placeholder="나이(age)">
+                <select id='genderBox'>
+                    <option value='' selected>선택</option>
+                    <option value='man'>남자</option>
+                    <option value='woman'>여자</option>
+                  </select>
+                  
+                <input id="button"   type="button" value="계산">
+                <input id="button2"  type="button" value="초기화">
+            </div>
+            <div id="content_2">
+                <table>
+                    <tr>
+                        <td><p>신체질량지수(BMI) :</p></td>
+                        <td><p id="preBMI"></p></td>
+                        <td><img src="arrow.png" alt=""></td>
+                        <td><p id="afterBMI"></p></td>     
+                    </tr>
+                    <tr>
+                        <td><p>기초대사량(BMR) :</p></td>
+                        <td><p id="preBMR"></p></td>
+                        <td><img src="arrow.png" alt=""></td>
+                        <td><p id="afterBMR"></p></td>       
+                    </tr>
+                    
+                </table>
+            </div>
+        </div>
+        <div id="footer">
+            <p id="comment"></p>
+        </div>
+    </div>
+    <script src="/main.js"></script>
+</body>
+
+</html>
