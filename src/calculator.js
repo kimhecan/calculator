@@ -1,24 +1,23 @@
-export function returnString(BMI) {
-    console.log('returnString');
-    var string;
-    if(BMI < 18.5) {
-        string = "저체중";
-    } else if(BMI < 23) {
-        string = "정상";
-    } else if(BMI < 25) {
-        string = "과체중";
-    } else if(BMI < 30) {
-        string = "비만";
-    } else {
-        string = "고도비만"
+const bmiToText = bmi => {
+    if (bmi < 18.5) {
+        return "저체중";
     }
-    return string;
+    if (bmi < 23) {
+        return "정상";
+    }
+    if (bmi < 25) {
+        return "과체중";
+    }
+    if (bmi < 30) {
+        return "비만";
+    }
+    return "고도비만";
 }
 
-export function comment(BMIList) {
+function comment(BMIList) {
     console.log('comment');
-    var pre = returnString(BMIList[0]);
-    var after = returnString(BMIList[1]);
+    var pre = bmiToText(BMIList[0]);
+    var after = bmiToText(BMIList[1]);
     var comment = '';
 
     if(pre === '저체중') {
@@ -60,10 +59,16 @@ export function comment(BMIList) {
     }
 
     return comment;
-
 }
-export function BMRString(BMR) {
+
+function BMRString(BMR) {
     var bigMac = 257;
     var count = BMR / bigMac;
     return count;
 }
+
+module.exports = {
+  bmiToText,
+  comment,
+  BMRString,
+};

@@ -1,4 +1,4 @@
-import { returnString, comment, BMRString } from './calculator';
+import { bmiToText, comment, BMRString } from './calculator';
 
 function checkInput() {
     const pre = document.getElementById('preWeight').value;
@@ -28,8 +28,10 @@ function BMIcalculator() {
     const BMIList = [preBMI,afterBMI];
 
     //결과값들을 출력한다.
-    document.getElementById('preBMI').innerHTML   = BMIList[0] +'('+ returnString(BMIList[0]) + ')';
-    document.getElementById('afterBMI').innerHTML = BMIList[1] +'('+ returnString(BMIList[1]) + ')';
+    document.getElementById('preBMI').innerHTML =
+      BMIList[0] +'('+ bmiToText(BMIList[0]) + ')';
+    document.getElementById('afterBMI').innerHTML =
+      BMIList[1] +'('+ bmiToText(BMIList[1]) + ')';
     document.getElementById('comment').innerHTML = comment(BMIList);
 
 }
