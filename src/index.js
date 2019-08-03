@@ -1,4 +1,4 @@
-import { returnString, comment, BMRString } from "./cal_logic";
+import { returnString, comment, BMRString } from './calculator';
 
 function checkInput() {
     const pre = document.getElementById('preWeight').value;
