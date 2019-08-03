@@ -1,18 +1,8 @@
-export function checkInput() {
-    const pre = document.getElementById('preWeight').value;
-    const after = document.getElementById('afterWeight').value;
-    const height = document.getElementById('height').value;
-    const age = document.getElementById('age').value;   
-    let target = document.getElementById("genderBox");
-    const gender =  target.options[target.selectedIndex].value;
-
-    console.log(pre, after, height, age, gender);
-    
-    if(!(pre && after && height && age && gender)) {
-        alert('입력값을 입력해주세요');
+export const checkInput = (element) => { 
+    if(!(element.value)) {
+         return alert(`${element.placeholder}이(가) 비어있습니다.`);
     }
 }
-
 
 
 export function BMIcalculator() {
@@ -39,6 +29,8 @@ export function BMIcalculator() {
 export function returnString(BMI) {
     console.log('returnString');
     var string;
+
+    
     if(BMI < 18.5) {
         string = "저체중";
     } else if(BMI < 23) {
@@ -47,8 +39,10 @@ export function returnString(BMI) {
         string = "과체중";
     } else if(BMI < 30) {
         string = "비만";
+    } else if(BMI === NaN){
+        string = "";
     } else {
-        string = "고도비만"
+        string = "고도비만";
     }
     return string;
 }
@@ -101,12 +95,7 @@ export function comment(BMIList) {
     
 }
 
-export function resetInput() {
-    document.getElementById('preWeight').value = '';
-    document.getElementById('afterWeight').value = '';
-    document.getElementById('height').value = '';
-    document.getElementById('age').value = '';
-}
+export const clearValue = (element) => element.value = '';
 
 export function BMRcalculator() {
     const pre = document.getElementById('preWeight').value;
