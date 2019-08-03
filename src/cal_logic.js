@@ -2,6 +2,7 @@ export const checkInput = (element) => {
     if(!(element.value)) {
          return alert(`${element.placeholder}이(가) 비어있습니다.`);
     }
+    return;
 }
 export function BMIcalculator() {
     console.log('BMIcalculator');
