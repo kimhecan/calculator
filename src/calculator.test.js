@@ -1,4 +1,11 @@
-const { bmiToText } = require('./calculator');
+const { computeBmi, bmiToText } = require('./calculator');
+
+test('computeBmi', () => {
+  // 여기에 “이 프로그램에 무엇을 입력했을 때 어떤 결과가 나올지”가 들어갑니다.
+  // 탐구한 결과가 없으므로 임의의 값을 넣습니다.
+
+  expect(computeBmi(67.5, 182.0)).toBe(20.38);
+});
 
 test('bmiToText', () => {
   // 여기에 “이 프로그램에 무엇을 입력했을 때 어떤 결과가 나올지”가 들어갑니다.

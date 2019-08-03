@@ -1,4 +1,4 @@
-import { bmiToText, comment, BMRString } from './calculator';
+import { computeBmi, bmiToText, comment, BMRString } from './calculator';
 
 function checkInput() {
     const pre = document.getElementById('preWeight').value;
@@ -15,24 +15,33 @@ function checkInput() {
     }
 }
 
+const getInputValues = () => ({
+  weights: [
+    document.getElementById('preWeight').value,
+    document.getElementById('afterWeight').value,
+  ],
+  height: document.getElementById('height').value,
+});
+
+const update = bmis => {
+  ['preBMI', 'afterBMI'].forEach((id, index) => {
+    const bmi = bmis[index];
+    document.getElementById(id).innerText = `${bmi}(${bmiToText(bmi)})`;
+  });
+  document.getElementById('comment').innerText = comment(bmis);
+};
+
 function BMIcalculator() {
     console.log('BMIcalculator');
+
     // 입력값들을 받는다.
-    const pre = document.getElementById('preWeight').value;
-    const after = document.getElementById('afterWeight').value;
-    const height = document.getElementById('height').value;
+    const { weights, height } = getInputValues();
 
-    //BMI를 계산한다.
-    const preBMI   =  (pre / ((height/100)**2)).toFixed(2);
-    const afterBMI =  (after / ((height/100)**2)).toFixed(2);
-    const BMIList = [preBMI,afterBMI];
+    // BMI를 계산한다.
+    const bmis = weights.map(weight => computeBmi(weight, height));
 
-    //결과값들을 출력한다.
-    document.getElementById('preBMI').innerHTML =
-      BMIList[0] +'('+ bmiToText(BMIList[0]) + ')';
-    document.getElementById('afterBMI').innerHTML =
-      BMIList[1] +'('+ bmiToText(BMIList[1]) + ')';
-    document.getElementById('comment').innerHTML = comment(BMIList);
+    // 결과값들을 출력한다.
+    update(bmis);
 
 }
 

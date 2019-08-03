@@ -1,3 +1,6 @@
+const computeBmi = (weight, height) =>
+  Number((weight / ((height / 100) ** 2)).toFixed(2));
+
 const bmiToText = bmi => {
     if (bmi < 18.5) {
         return "저체중";
@@ -68,6 +71,7 @@ function BMRString(BMR) {
 }
 
 module.exports = {
+  computeBmi,
   bmiToText,
   comment,
   BMRString,
